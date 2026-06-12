@@ -170,8 +170,7 @@ All participant endpoints require bearer token authentication. Follow these step
 ## Completed Tasks and Trade-offs
 
 ### What Was Completed:
-* A fully operational monorepo workspace structure.
-* A decoupled backend utilizing Clean Architecture principles.
+* Decoupled backend utilizing Clean Architecture principles.
 * JWT authentication router (user register, login).
 * Complete participant CRUD operations (Create, Read, Update, Delete).
 * A metrics aggregation use case yielding study splits, average ages, status ratios, and gender breakdowns.
@@ -180,19 +179,18 @@ All participant endpoints require bearer token authentication. Follow these step
 * A multi-page React dashboard built with state-based routing and vanilla CSS variables.
 * Multi-stage Docker builds orchestrating Node, Python, and Nginx.
 
-### What Was Skipped / Postponed:
-* **CI/CD Workflow Configuration**: Excluded from active scope by request.
-* **Persistent PostgreSQL Deployment**: Pushed to the next production roadmap phase in favor of local Docker volume SQLite persistence for speed.
-
 ### Trade-offs:
 * **SQLite for Database Storage**: SQLite was selected over PostgreSQL to simplify local Docker configuration. SQLite is fully compatible with SQLAlchemy and runs asynchronously via aiosqlite, which makes it simple to run locally while keeping the schema completely modular for database engine changes.
 
 ---
 
+
 ## AI Tools Used
 
-This project was built with the assistance of the AI developer **Antigravity**. It assisted in:
-* Scaffolding the Hexagonal / Clean Architecture directory structure.
+This project was built with the assistance of the AI developer **Claude AI**. It assisted in:
+
 * Designing the custom vanilla CSS variables and responsive dashboard grids.
 * Setting up testing transactions on in-memory sqlite fixtures.
-* Debugging dependency version issues inside the Docker container builds (e.g. locking bcrypt versions).
+* Reviewing the code for best practices and suggesting improvements.
+* Building a clean README
+  
